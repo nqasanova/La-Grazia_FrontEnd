@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/images/Logo.png" sizes="900x900">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <!-- Header Area Start Here -->
+    <header>
+        <nav>
+            <label for="toggler"><i class="fa fa-bars"></i></label>
+            <input type="checkbox" id="toggler" name="">
+
+            <div class="header-fixed">
+                <ul class="list">
+                    <li>
+                        <a href=" ./account.html"><i class="fa-regular fa-user"></i></a>
+                        <a href="./wishlist.html"><i class="fa-regular fa-heart"></i><span class="icon-count">0</span></a>
+                    </li>
+                    
+                    <li class="account-box-main">
+                        <div class="my-account-box">
+                            <p>MY ACCOUNT</p>
+                            <a data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <span>Log In</span>
+                            </a>
+                            <a data-bs-toggle="modal" data-bs-target="#registerModal">
+                                <span>Register</span>
+                            </a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT US</a></li>
+                    <li><a href="./shop.html">SHOP</a></li>
+                    <li><a href="./index.html"><img class="header-logo"  src="./assets/images/logo.png" alt=""></a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./blog.html">BLOG</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a class="searchModal" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="icon-count">0</span></a>
+                    </li>
+                        
+                    <li class="cart-box ">
+                        <div class="cart-box-main">
+                            <div class="my-cart-box">
+                                <div class="cart-box-items">
+                                    <div class="cart-box-img">
+                                        <a href="">
+                                            <img src="./assets/images/Fragrance 1.webp" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cart-box-detail">
+                                        <div class="cart-product-name">
+                                            <a href="">
+                                                <span>BACCARAT ROUGE 540 EXTRAIT DE PARFUM</span>
+                                            </a>
+                                            <span>1 × €210.00</span>
+                                        </div>
+                                        <div class="remove-button">
+                                            <i class="fas fa-minus-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cart-box-items">
+                                    <div class="cart-box-img">
+                                        <a href="">
+                                            <img src="./assets/images/Fragrance2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="cart-box-detail">
+                                        <div class="cart-product-name">
+                                            <a href="">
+                                                <span>BACCARAT ROUGE 540 EAU DE PARFUM</span>
+                                            </a>
+                                            <span>1 × €150.00</span>
+                                        </div>
+                                        <div class="remove-button">
+                                            <i class="fas fa-minus-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-subtotal">
+                                <span class="subtotal-text">subtotal: €360.00</span>
+                                <span class="subtotal-price"></span>
+                            </div>
+                            <div class="cart-buttons">
+                                <a href="./cart.html" class="button view-cart-button">view cart</a>
+                                <a href="./checkout.html" class="button checkout-button">checkout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Area End Here -->
+
+    <!-- Scroll Top Area Start Here -->
+    <a href="" class="scroll-top ">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Scroll Top Area End Here -->
+
+    <!-- Page Title Area Start Here -->
+    <section class="page-title" style="background-image: url('./assets/images/Maison\ Francis\ Kurkdjian\ 15.36.46.jpg');">
+        <div class="container">
+            <div class="row">
+                <h1>CHECKOUT</h1>
+                <div class="page-tab">
+                    <a href="./index.html">HOME</a>
+                    <i class="fas fa-angle-right"></i>
+                    <span>CHECKOUT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title Area End Here -->
+
+    <!-- Checkout Area Start Here -->
+    <section class="checkout-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 checkout-left">
+                    <h2>BILLING DETAILS</h2>
+                    <div class="user-detail-box">
+                        <form action="" id="order-form">
+                            <div class="row">
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        Full Name
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="" id="" placeholder="Full Name">
+                                </div>
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        Email
+                                        <span>*</span>
+                                    </label>
+                                    <input type="email" name="" id="" placeholder="Email">
+                                </div>
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        Phone Number
+                                        <span>*</span>
+                                    </label>
+                                    <input type="number" name="" id="" placeholder="Phone number">
+                                </div>
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        Country
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="" id="" placeholder="Country">
+                                </div>
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        City
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="" id="" placeholder="City">
+                                </div>
+                                <div class="col-6 user-form-item">
+                                    <label for="">
+                                        Zip Code
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="" id="" placeholder="Zip Code">
+                                </div>
+                                <div class="col-12 user-form-item">
+                                    <label for="">
+                                        Address
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="" id="" placeholder="Address">
+                                </div>
+                                
+                            </div>
+                            <div class="order-notes user-form-item">
+                                <label for="">Special Notes</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Write important details about your order, e.g. notes for packaging, delivery..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-6 checkout-right">
+                    <h2>YOUR PURCHASE</h2>
+                    <table class="order-detail-box">
+                        <thead>
+                            <tr>
+                                <th class="product-name">Product</th>
+                                <th class="product-total">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="order-product">
+                                <td class="product-name">Baccarat Rouge 540 Extrait De Parfum  × 1</td>
+                                <td class="product-price product-total">€210.00</td>
+                            </tr>
+                            <tr class="order-product">
+                                <td class="product-name">Oud Satin Mood Eau De Parfum  × 2</td>
+                                <td class="product-price product-total">€140.00</td>
+                            </tr>
+                            <tr class="order-product">
+                                <td class="product-name">A La Rose Eau De Parfum  × 3</td>
+                                <td class="product-price product-total">€120.00</td>
+                            </tr>
+                            <tr class="order-product">
+                                <td class="product-name">Aqua Universalis Eau De Toilette  × 1</td>
+                                <td class="product-price product-total">€105.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="order-total">
+                                <th class="product-name">Total</th>
+                                <td class="product-total product-price">€955.00</td>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                    <div class="order-buy">
+                        <button type="submit" form="order-form">BUY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Area End Here -->
+
+    <!-- Footer Area Start Here -->
+    <footer style="background-image: url(./assets/images/FooterMaison.webp);">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <h3>INFORMATION</h3>
+                        <a href="./about.html" class="footer-item">∘ About Us</a>
+                        <a href="./shop.html" class="footer-item">∘ Shop</a>
+                        <a href="./faq.html" class="footer-item">∘ FAQ</a>
+                        <a href="./blog.html" class="footer-item">∘ Blog</a>
+                        <a href="./contact.html" class="footer-item">∘ Contact</a>
+                    </div>
+                    <div class="col-2">
+                        <h3>MY ACCOUNT</h3>
+                        <a href="" class="footer-item">∘ Order Tracking</a>
+                        <a href="./cart.html" class="footer-item">∘ Cart</a>
+                        <a href="./checkout.html" class="footer-item">∘ Checkout</a>
+                        <a href="./wishlist.html" class="footer-item">∘ Wishlist</a>
+                        <a href="./account.html" class="footer-item">∘ My Account</a>
+                    </div>
+                    <div class="col-5">
+                        <h3>GENERAL</h3>
+                        <div class="footer-icon-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Stazione Roma Termini, Piazza dei Cinquecento, <br> 00185, Roma</span>
+                        </div>
+                        <div class="footer-icon-box">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>(+000) 000 000 0000</span>
+                        </div>
+                        <div class="footer-icon-box">
+                            <i class="fas fa-envelope"></i>
+                            <span>lagrazia@gmail.com</span>
+                        </div>
+                        <div class="footer-icon-box">
+                            <i class="fas fa-clock"></i>
+                            <span>Monday - Saturday, 7 am to 9 pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row footer-bottom-box">
+                    © Copyright 2023 <a href="">La Grazia</a>- All Rights Reserved - Powered by<a href="">La Grazia Theme.</a>
+                    <span>
+                        <img src="./assets/images/payment.png" alt="">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End Here -->
+
+    <!-- Modal For Login Area Start Here -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-imput-item">
+                            <input type="text" placeholder="Username">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-imput-item">
+                            <input type="password" placeholder="Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="form-remember-me">
+                            <label for="">
+                                <input type="checkbox" name="" id="">
+                                Remember Me
+                            </label>
+                        </div>
+                        <button type="submit">LOGIN</button>
+                        <a href="" class="forgot-password">Forgot your password?</a>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Not a member?</p>
+                    <a data-bs-toggle="modal" data-bs-target="#registerModal">REGISTER</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal For Login Area End Here -->
+
+    <!-- Modal For Register Area Start Here -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModallLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title create-account" id="registerModalLabel">Create An Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-imput-item">
+                            <input type="text" placeholder="Username">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="form-imput-item">
+                            <input type="email" placeholder="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="form-imput-item">
+                            <input type="password" placeholder="Password">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="form-imput-item">
+                            <input type="password" placeholder="Confirm Password">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <button type="submit">REGISTER</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Already a member?</p>
+                    <a data-bs-toggle="modal" data-bs-target="#loginModal">SIGN IN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal For Register Area End Here -->
+
+    <!-- Modal For Search Area Start Here -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <input type="search" name="" id="" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal For Search Area End Here -->
+
+    <!-- JavaScript Links Area Start Here -->
+    <script src="./assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/b26885e958.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- JavaScript Links Area End Here-->
+</body>
+</html>
